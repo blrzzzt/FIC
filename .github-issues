@@ -1,0 +1,15 @@
+List of issues in my experience configuring keystone:
+
+Default contact.js:
+
+--- a/routes/views/contact.js
++++ b/routes/views/contact.js
+@@ -25,7 +25,7 @@ exports = module.exports = function (req, res) {
+                        errorMessage: 'There was a problem submitting your enquiry:',
+                }, function (err) {
+                        if (err) {
+-                               locals.validationErrors = err.errors;
++                               locals.validationErrors = err.error;
+                        } else {
+                                locals.enquirySubmitted = true;
+                        }
